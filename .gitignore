@@ -1,70 +1,32 @@
-*~
-*.sw[mnpcod]
-*.log
-*.tmp
-*.tmp.*
-log.txt
-*.sublime-project
-*.sublime-workspace
-.vscode/
-npm-debug.log*
-
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 .idea/
-.ionic/
-.sourcemaps/
-.sass-cache/
-.tmp/
-.versions/
-coverage/
-dist/
-node_modules/
-tmp/
-temp/
-platforms/
-plugins/
-plugins/android.json
-plugins/ios.json
-$RECYCLE.BIN/
-postgres_dev/
-logfile
-
-.DS_Store
-Thumbs.db
-UserInterfaceState.xcuserstate
-node_modules
-venv/
-*~
-*.sw[mnpcod]
-*.log
-*.tmp
-*.tmp.*
-log.txt
-*.sublime-project
-*.sublime-workspace
 .vscode/
-npm-debug.log*
+build
+*.tgz
+lerna-debug.log
 
-.idea/
-.ionic/
-.sourcemaps/
-.sass-cache/
-.tmp/
-.versions/
-coverage/
-www/
-node_modules/
-tmp/
-temp/
-platforms/
-plugins/
-plugins/android.json
-plugins/ios.json
-$RECYCLE.BIN/
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+/.changelog
+.npm/
+yarn.lock
 
+# testing
+/coverage
+
+# production
+/build
+
+# misc
 .DS_Store
-Thumbs.db
-UserInterfaceState.xcuserstate
-node_modules
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-.env
-dist
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
