@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "elarian": "^0.2.25"
+    "elarian": "^0.2.25",
+    "signale": "^1.4.0"
   }
 }
