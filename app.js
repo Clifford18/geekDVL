@@ -4,11 +4,24 @@ const log = require("signale");
 let myClient ;
 
 const myWhatsappChannel ={
-	number:"+254721303295",
+	number:"+ 254721303295",
 	channel:"whatsapp"
 };
 
 async function handleWhatsappMessages(notification, customer, appData, callback){
+	log.info(`This is the notification sent by the customer: ${notification.text}`);
+
+	if (notification.text){
+		let myResp =await customer.sendMessage (myWhatsappChannel, {
+			body:{
+				text: "Hi Welcome to eFinance"
+			}
+		});
+
+		log.info(`Message sent: ${JSON.stringify(myResp)}`);}
+}
+
+async function handleUssdSession(notification, customer, appData, callback){
 	log.info(`This is the notification sent by the customer: ${notification.text}`);
 
 	if (notification.text){
@@ -31,8 +44,13 @@ function start () {
 	myClient
 		.on("error", (error) => log.error(error))
 		.on("connected", ()=> log.success("App is connected..."))
-		.on("receivedWhatsapp", handleWhatsappMessages)
+
 		.connect();
+	myClient
+		.on("ussdSession",handleUssdSession)
+	myClient
+		.on("receivedWhatsafpp", handleWhatsappMessages)
+
 }
 
 start();
