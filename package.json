@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "africastalking": "^0.5.5",
     "elarian": "^0.2.25",
     "signale": "^1.4.0"
   }
